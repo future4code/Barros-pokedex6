@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Ricardo
 - Juliano
 
-Link do Surge: www.link.com.br
+Link do Surge: quarrelsome-mass.surge.sh
 
 O que funciona:
 - Mecanismo de busca
