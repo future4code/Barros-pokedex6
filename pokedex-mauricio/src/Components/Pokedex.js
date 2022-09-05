@@ -1,17 +1,16 @@
 import React from "react";
-import {useNavigate} from "react-router-dom"
-function Pokedex () {
-    const navigate = useNavigate()
-    const goToHome=() => navigate("/")
-    const goToPokedexDetais=() => navigate("/podedex/poke-detais")
-
-    return(
-        <div>
-            <h1>Pokedex</h1>
-            <button onClick={goToPokedexDetais}>Detalhes</button>
-            <button onClick={goToHome}>Voltar</button>
-        
+const Pokedex = (props) => {
+    const {pokemons, loading} = props;
+    return (
+    <div>
+        <div className="header-pokedex">
+        <h1>Pokedex</h1>
         </div>
+        <div>Paginação:</div>
+        {loading ? (<div>Carregando, Calma ae... </div>) :
+        (<div className="pokedex-grid" ></div>)}
+    
+    </div>
     )
 };
 export default Pokedex;
