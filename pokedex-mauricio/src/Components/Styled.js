@@ -56,3 +56,48 @@ div{
     grid-template-columns: repeat(3,1fr);
 };
 `
+export const PokemonStyle = styled.div`
+.pokemon-card{
+    display:flex;
+    box-shadow: 4px 4px 4px (0,0,0,0.25);
+    border-radius:3px;
+};
+img{
+    width:70px;
+    height:70px;
+    margin-right:10px;
+};
+.image-container{
+    padding: 0px 10px;
+};
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px 10px 0;
+    flex:1;
+
+};
+.card-top{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+};
+h3{
+    text-transform:capitalize;
+};
+.card-bottom{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+
+};
+.pokemon-type{
+    display:flex;
+    margin-right: 10px;
+    text-transform:capitalize;
+}
+`
