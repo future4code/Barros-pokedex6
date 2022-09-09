@@ -1,23 +1,20 @@
 import React, { useState } from "react";
-import { searchPokemon } from "../api";
+
 import { SearchBarStyle } from "./Styled";
-const SearchBar = () => {
-    const [search,setSearch] = useState("ditto");
-    const [pokemon,setPokemon] = useState()
+const SearchBar = (props) => {
+  const [search, setSearch] = useState("ditto");
+  const { onSearch } = props;
   const onChangeHandler = (e) => {
-    setSearch(e.target.value)
+    setSearch(e.target.value);
+    if (e.target.value.lenght === 0) {
+      onSearch(undefined);
+    }
   };
 
-  const onButtonClickHandler = () =>{
-    onSearchHandler(search)
+  const onButtonClickHandler = () => {
+    onSearch(search);
   };
 
-  const onSearchHandler = async (pokemon) =>{
-    const result = await searchPokemon(pokemon)
-    setPokemon(result)
-    console.log("Pokemon", result)
-  }
-  
   return (
     <SearchBarStyle>
       <div>
@@ -26,13 +23,6 @@ const SearchBar = () => {
       <div className="search-btn">
         <button onClick={onButtonClickHandler}>Buscar</button>
       </div>
-      {pokemon ? (
-        <div>
-          <div>Nome:{pokemon.name}</div>
-          <div>Peso:{pokemon.weight}</div>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
-        </div>
-      ): null}
     </SearchBarStyle>
   );
 };
