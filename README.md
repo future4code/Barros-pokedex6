@@ -5,14 +5,17 @@ Nome dos integrantes:
 - Ricardo
 - Juliano
 
-Link do Surge: quarrelsome-mass.surge.sh
+Link do Surge: male-umbrella.surge.sh
 
 O que funciona:
 - Mecanismo de busca
 - Pokedex do 1 ao 20
+- Paginas com todos pokemons
+- favoritar pokemons
+
 
 O que não funciona: 
-- Item 3
-- Item 4
+- ver detalhes
+
 
 # Add
