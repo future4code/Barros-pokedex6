@@ -13,3 +13,4 @@ function PaginaDetalhes() {
 }
 
 export default PaginaDetalhes
+

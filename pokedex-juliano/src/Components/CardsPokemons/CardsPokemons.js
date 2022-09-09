@@ -8,15 +8,11 @@ import { irParaDetalhes } from "../../Routes/Coordenadas";
 import { ContainerCard } from "./style";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 
-
 function CardsPokemons({ nome, adicionarPokemon}) {
     const { listapoke, pokemons } = useContext(GlobalStateContext)
-
     const navigate = useNavigate()
     const poke = nome
     const pokemonData = useRequestData({}, `${BASE_URL}/pokemon/${poke}`)[0];
-
-    
    
     return (
         <ContainerCard background={pokemonData.types && pokemonData.types[0].type.name}>
@@ -31,13 +27,11 @@ function CardsPokemons({ nome, adicionarPokemon}) {
                                     </Box>
                                     <span>#00{pokemonData.id && pokemonData.id}</span>
                                 </div>
-
                                 <Box textTransform={'capitalize'}>
                                     <span className="tipo">
                                         {pokemonData.types && pokemonData.types[0].type.name}
                                     </span>
                                 </Box>
-
                                 <div className="cartao-imagem">
                                     <img
                                         onClick={() => irParaDetalhes(navigate, nome)}
@@ -47,10 +41,8 @@ function CardsPokemons({ nome, adicionarPokemon}) {
                                     />
                                 </div>
                             </div>
-
                             <div className="cartao-informacoes">
                                 <div className="buttons">
-
                                     <button className="btn item1" onClick={adicionarPokemon}> 
                                     Adicionar à Pokédex<Pokebola/>
                                     </button>

@@ -10,12 +10,10 @@ import Pagination from '@mui/material/Pagination';
 function Home() {
     const { listaPoke, paginaAtual, setPaginaAtual, setPagina, pokemons, setPokemons } = useContext(GlobalStateContext)
    
-
     const mudarPagina = (event, number) => {
         setPaginaAtual(number);
         setPagina((number - 1) * 20);
     };
-
     const adicionarPokemon = (pokes) => {
         const newPokemonList = pokemons.find((p) => pokes.name === p.name);
         if(newPokemonList){
@@ -29,9 +27,6 @@ function Home() {
         }
       };
 
-
-   
-    
     const listaMapeada = listaPoke.results && listaPoke.results.map((pokes) => {
         return (
             <CardsPokemons
@@ -53,7 +48,6 @@ function Home() {
                         count={57}
                         page={paginaAtual}
                         onChange={mudarPagina}
-        
                     />
                 </Stack>
             </ContainerPagina>

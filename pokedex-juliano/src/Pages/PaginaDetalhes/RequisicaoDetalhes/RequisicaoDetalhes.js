@@ -41,7 +41,6 @@ function RequisicaoDetalhes() {
         return (
             <PageContainer key={poke.name}>
                 <PokeContainer background={poke.types && poke.types[0].type.name}>
-
                     <DetalhesHeader>
                         <TiposContainer>
                             <Box textTransform={'capitalize'} >
@@ -53,30 +52,23 @@ function RequisicaoDetalhes() {
                             <button >Adicionar à Pokedéx</button>
                         </Box>
                     </DetalhesHeader>
-
                     <div>
                         <img src={poke.sprites.other.dream_world.front_default} />
                     </div>
-
                     <DetalhesContainer>
                         <Box>
                             <Box textTransform={'capitalize'}><h1>{poke.name}</h1></Box>
                         </Box>
-
                         <Box>
                             <AtaqueMovesContainer>
-
                                 <StatusContainer>
                                         <h1>Stats</h1>
-
                                     <Status>
                                         <div>
                                             <p> <GiHeartBottle /> <b>HP:</b> {poke.stats[0].base_stat}
                                                 <StyleProgresso variant="determinate" value={poke.stats[0].base_stat} /></p>
-
                                             <p> <GiPointySword /> <b>Ataque:</b> {poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'}
                                                 <StyleProgresso variant="determinate" value={poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'} /></p>
-
                                             <p> <GiShieldEchoes /> <b>Defesa:</b> {poke.stats[2].base_stat ? poke.stats[2].base_stat : 'N/A'}
                                                 <StyleProgresso variant="determinate" value={poke.stats[2].base_stat ? poke.stats[2].base_stat : 'N/A'} /></p>
                                         </div>
@@ -84,10 +76,8 @@ function RequisicaoDetalhes() {
                                         <div>
                                             <p> <GiRunningNinja /> <b>Velocidade: </b> {poke.stats[5].base_stat ? poke.stats[5].base_stat : 'N/A'}
                                                 <StyleProgresso variant="determinate" value={poke.stats[5].base_stat ? poke.stats[5].base_stat : 'N/A'} /></p>
-
                                             <p> <GiMagicTrident /> <b>Ataque-Especial:</b> {poke.stats[3].base_stat ? poke.stats[3].base_stat : 'N/A'}
                                                 <StyleProgresso variant="determinate" value={poke.stats[3].base_stat ? poke.stats[3].base_stat : 'N/A'} /></p>
-
                                             <p> <GiShieldOpposition /> <b>Defesa-Especial: </b> {poke.stats[4].base_stat ? poke.stats[4].base_stat : 'N/A'}
                                                 <StyleProgresso variant="determinate" value={poke.stats[4].base_stat ? poke.stats[4].base_stat : 'N/A'} /></p>
                                         </div>
@@ -106,11 +96,9 @@ function RequisicaoDetalhes() {
                                         <p>- {poke.moves[4] ? poke.moves[4].move.name : 'N/A'}</p>
                                     </BoxMoves>
                                 </MovesContainer>
-
                             </AtaqueMovesContainer>
                         </Box>
                     </DetalhesContainer>
-
                 </PokeContainer>
             </PageContainer >
         )

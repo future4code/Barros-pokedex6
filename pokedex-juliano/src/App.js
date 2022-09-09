@@ -2,7 +2,6 @@ import React from 'react';
 import GlobalState from './Global/GlobalState';
 import Router from './Routes/Router';
 
-
 function App() {
 
   return (
@@ -10,7 +9,6 @@ function App() {
       <Router />
     </GlobalState>
   )
-
 }
 
 export default App;
