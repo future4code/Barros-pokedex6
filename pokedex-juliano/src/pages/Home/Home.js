@@ -1,39 +1,63 @@
-import React, { useContext } from "react";
-import { ContainerCard, HomeContainer } from "./style";
-import Header from "../../components/Header/Header";
-import { GlobalStateContext } from "../../global/GlobalStateContext";
-import CardPoke from "../../components/CardPoke/CardPoke";
-import Pagination from "../../components/Pagination/Pagination";
+import React, { useContext, useEffect } from "react";
+import CardsPokemons from "../../Components/CardsPokemons/CardsPokemons";
+import Header from "../../Components/Header/Header";
+import GlobalStateContext from "../../Global/GlobalStateContext";
+import { ContainerHome, ContainerPagina } from "./Styled";
+import Stack from '@mui/material/Stack';
+import Pagination from '@mui/material/Pagination';
 
 
-const Home = () => {
-  const { pokemonDetail, setCurrentPageUrl, nextPageUrl, prevPageUrl } =
-    useContext(GlobalStateContext);
+function Home() {
+    const { listaPoke, paginaAtual, setPaginaAtual, setPagina, pokemons, setPokemons } = useContext(GlobalStateContext)
+   
 
-  const listPokemons = pokemonDetail.map((poke) => {
+    const mudarPagina = (event, number) => {
+        setPaginaAtual(number);
+        setPagina((number - 1) * 20);
+    };
 
-    return <CardPoke poke={poke} />
+    const adicionarPokemon = (pokes) => {
+        const newPokemonList = pokemons.find((p) => pokes.name === p.name);
+        if(newPokemonList){
+          alert('Pokemon ja foi adicionado Pokédex!')
+        }else{
+          const adicionarPoke = window.confirm(`Quer adiconar o ${pokes.name} a pokedex?`)
+          if(adicionarPoke){
+            const novosPokes = [ ...pokemons, pokes]
+            setPokemons(novosPokes);
+          }
+        }
+      };
 
-  });
 
-  function goNextPage() {
-    setCurrentPageUrl(nextPageUrl)
-  }
-
-  function goPrevPage() {
-    setCurrentPageUrl(prevPageUrl)
-  }
-
-  return (
-    <HomeContainer>
-      <Header />
-      <ContainerCard>{listPokemons}</ContainerCard>
-      <Pagination
-        goNextPage={nextPageUrl ? goNextPage : null}
-        goPrevPage={prevPageUrl ? goPrevPage : null}
-      />
-    </HomeContainer>
-  );
-};
-
+   
+    
+    const listaMapeada = listaPoke.results && listaPoke.results.map((pokes) => {
+        return (
+            <CardsPokemons
+                adicionarPokemon={() => adicionarPokemon(pokes)}
+                key={pokes.name}
+                nome={pokes.name}
+            />
+        )
+    })
+    return (
+        <div>
+            <Header />
+            <ContainerHome>
+                {listaMapeada}
+            </ContainerHome>
+            <ContainerPagina>
+                <Stack spacing={2}>
+                    <Pagination  className="paginacao"  color="primary" 
+                        count={57}
+                        page={paginaAtual}
+                        onChange={mudarPagina}
+        
+                    />
+                </Stack>
+            </ContainerPagina>
+        </div>
+    )
+}
 export default Home;
