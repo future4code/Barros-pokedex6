@@ -11,15 +11,10 @@ function Router() {
     return (
         <BrowserRouter>
             <Routes>
-
                 <Route path={"/"} element={<Home />} />
-
                 <Route path={"/detalhes/:id"} element={<PaginaDetalhes />} />
-
                 <Route path={"/pokedex"} element={<PaginaPokedex />} />
-
                 <Route path={"*"} element={<PaginaErro />} />
-
             </Routes>
         </BrowserRouter>
     )

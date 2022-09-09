@@ -10,7 +10,6 @@ function GlobalState(props) {
     const [listaPoke, setListaPoke] = useRequestData([], `${BASE_URL}/pokemon?limit=20&offset=${pagina}`)
     const [pokemons, setPokemons] = useState([])
 
- 
 
     const removerPokemon = (pokemon) => {
       const newPokedex = pokemons.filter((p) => p.name !== pokemon.name);
@@ -30,7 +29,6 @@ function GlobalState(props) {
       setPokemons,
       removerPokemon
     }
-
 
     return (
         <GlobalStateContext.Provider value={ data }>

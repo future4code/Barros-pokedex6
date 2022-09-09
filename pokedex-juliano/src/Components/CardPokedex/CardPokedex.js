@@ -13,7 +13,6 @@ function CardsPokemons({ nome, removerPokemon}) {
     const poke = nome
     const pokemonData = useRequestData({}, `${BASE_URL}/pokemon/${poke}`)[0];
 
-    
     return (
         <ContainerCard background={pokemonData.types && pokemonData.types[0].type.name}>
                 <div className="main">
@@ -25,12 +24,9 @@ function CardsPokemons({ nome, removerPokemon}) {
                                         <h1 className="nome">{nome}</h1>
                                         <span>#00{pokemonData.id && pokemonData.id}</span>
                                     </div>
-
                                     <span className="tipo">
                                         {pokemonData.types && pokemonData.types[0].type.name}
                                         </span>
-
-
                                     <div className="cartao-imagem">
                                         <img
                                             className="imagem"
@@ -39,12 +35,10 @@ function CardsPokemons({ nome, removerPokemon}) {
                                         />
                                     </div>
                                 </div>
-
                                 <div className="cartao-informacoes">
                                     <div className="buttons">
                                         <button className="btn item1" onClick={removerPokemon}>Remover <Pokebola className="pokebola"/></button>
                                         <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Detalhes</button>
-                                       
                                     </div>
                                 </div>
                             </div>

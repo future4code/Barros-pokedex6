@@ -1,3 +1,69 @@
+##### ############## SOBRE ########################### ####
+
+
+<p align="center">🖥️ Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu baseado em React JS, para o desenvolvimento de um web site inspirado na Pokédex do anime Pokémon. Nele você pode criar sua própria pokédex com os seus pokémons preferidos. </p>
+
+<h2 id="link">:link: Link Surge - link para visualização do site</h2>
+ <a href="http://various-linen.surge.sh/">PokeDéx</a>
+
+<h2 id="tecnologias"> 🛠 Tecnologias </h2>
+
+Ferramentas usadas na construção do projeto:
+
+* React JS
+* Styled-components
+* Chakra UI Design System
+* Customs e React Hooks
+* React Router DOM
+* Integração com API
+* Axios
+
+<h2 id="funciona">:heavy_check_mark: O que funciona</h2>
+<h3> Header</h3>
+
+* Possui um botão que direciona para página home
+* Possui um botão que direciona para pokedéx
+
+<h3> Página Home</h3>
+
+* Mostra a lista de pokemons ao usuário
+* Botão de adicionar o pokemon à pokedéx
+* Botão de ver os detalhes de um pokemon
+
+<h3> Página Pokedéx</h3>
+
+* Mostra a lista de pokemons adicionados pelo usuário
+* Botão de remover o pokemon da pokedéx
+* Botão de ver os detalhes de um pokemon
+* Quando a pokedéx está vazia, isso é mostrado ao usuário
+
+<h3> Página de Detalhes<h3> 
+
+ <h4>
+   
+* Mostra o nome e imagem frontal do pokemon
+* Mostra o stats (HP, ataque, defesa, ataque especial, defesa especial, velocidade)
+* Mostra o tipo do pokemon
+* Mostra os principais movimentos/ataques do pokemon
+   
+</h4>
+  
+<h3>➕ Outras funcionalidades</h3>
+  
+* Responsividade para mobile
+* Caso o usuário digite uma url inválida o mesmo será direcionado para a página de erro
+* Paginação
+  
+<h2 id="nao-funciona">:x: O que não funciona</h2>
+
+* Ao clicar no botão de adicionar, o card do Pokemon clicado deve desaparecer da tela (Página Home);
+* Botão para adicionar ou remover o pokemon da Pokedex a partir da página de detalhes (Página de Detalhes);
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

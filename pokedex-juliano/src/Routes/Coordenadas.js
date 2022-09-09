@@ -9,3 +9,5 @@ export const irParaDetalhes = (navigate,  id) => {
 export const irParaPokedex = (navigate) => {
     navigate("/pokedex")
 }
+
+

@@ -14,13 +14,9 @@ const useRequestData = (initialState, url) => {
                     setData(response.data)
                 })
                 .catch((error) => {
-                   
                 })
-        
     }, [url]);
 
     return [data, setData, carregando]
 }
 export default useRequestData
-
-

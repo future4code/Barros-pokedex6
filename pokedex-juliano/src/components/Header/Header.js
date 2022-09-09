@@ -21,7 +21,6 @@ function Header() {
             justify={'space-around'}
             align={'center'}
         >
-
             <Image
                 src={logoPokedex}
                 onClick={() => irParaHome(navigate)}
@@ -80,7 +79,6 @@ function Header() {
                     </MenuList>
                 </Menu>
             </Flex>
-
         </Flex >
     )
 }
