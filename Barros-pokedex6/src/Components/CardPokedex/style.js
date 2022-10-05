@@ -3,23 +3,23 @@ import styled, { css } from "styled-components";
 export const RESOLVE_STYLE = {
   normal: css`
   color: black;
-  background: linear-gradient(90deg, rgba(189,162,170,1) 40%, rgba(227,208,213,1) 100%);
+  background: linear-gradient(90deg, rgba(180,160,170,1) 40%, rgba(225,205,210,1) 100%);
   `,
   fire: css`
   color: black;
-  background: linear-gradient(90deg, rgba(255,97,102,1) 40%, rgba(255,190,193,1) 100%);
+  background: linear-gradient(90deg, rgba(255,95,100,1) 40%, rgba(255,190,195,1) 100%);
   `,
   water: css`
   color: black;
-  background: linear-gradient(90deg, rgba(60,118,255,1) 40%, rgba(175,199,255,1) 100%);
+  background: linear-gradient(90deg, rgba(60,115,255,1) 40%, rgba(175,200,255,1) 100%);
 `,
   grass: css`
   color: black;
-  background: linear-gradient(90deg, rgba(58,255,108,1) 40%, rgba(162,255,186,1) 100%);
+  background: linear-gradient(90deg, rgba(55,255,105,1) 40%, rgba(160,255,185,1) 100%);
   `,
   flying: css`
   color: black;
-  background: linear-gradient(90deg, rgba(155,186,208,1) 40%, rgba(213,237,255,1) 100%);
+  background: linear-gradient(90deg, rgba(155,185,205,1) 40%, rgba(210,235,255,1) 100%);
  `,
   fighting: css`
   color: black;
